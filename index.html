@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W2D3 - Pratica - Exam</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div id="wrapperHeader">
+            <a href="#">
+                <div class=" logo">
+                    <img src="/assets/logos/Medium_logo_complete.svg" alt="logo Medium">
+                </div>
+            </a>
+            <!-- Ho creato questa parte qui con un elemento nav e all'interno gli elementi div per 
+             creare una sorta di Navigation Bar, col senno di poi credo che semanticamente sia più 
+             corretto fare nav, ul e poi i vari li... Preferisco però lasciare come ho eseguito l'esercizio 
+             affinché possa ricevere maggiori delucidazioni da parte dei prof. -->
+
+            <!-- Credo che comunque sia più corretto assegnare a questi div (li se non fossero corretti i div),
+             dei button... Io comunque non li ho inseriti essendo che non li abbiamo trattati più di tanto
+             e sempre per il motivo di avere maggiori informazioni. 
+             Per dare l'effetto che fossero dei button ho comunque applicato degli effetti hover
+             e utilizzando la proprietà curson: pointer per dare l'effetto dei pulsanti-->
+
+            <!-- In tutto l'esercizio ho applicato l'attributo curson per dare l'effetto che fossero dei button, 
+             stesso motivo scritto qui sopra -->
+            <nav>
+                <div class="searchButton">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </div>
+                <div class="saveButton">
+                    <span class="material-symbols-outlined">
+                        bookmarks
+                    </span>
+                </div>
+                <div class="notifyButton">
+                    <span class="material-symbols-outlined">
+                        notifications
+                    </span>
+                </div>
+                <div class="memberButton">
+                    <p>Riattiva iscrizione</p>
+                </div>
+                <div class="profileButton">
+                    <p>E</p>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="wrapper">
+        <main>
+            <section class="recommended">
+                <div class="choiceView">
+                    <div class="choiceFollowing">
+                        <p>Seguiti</p>
+                    </div>
+                    <div class="choiceRecommended">
+                        <p>Consigliati per te</p>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="singleArticle">
+                        <div class="authorArticle">
+                            <div class="proPicAuthor">
+                                <img src="/assets/img/propic/img_3.jpg" alt="">
+                            </div>
+                            <p class="nameAuthor">Mario Rossi</p>
+                        </div>
+                        <div class="informationArticle">
+                            <h2>La migliore Tech Academy d'Italia! Vieni a scoprire Epicode e tutti i suoi corsi!</h2>
+                            <p>Oggi parleremo di Epicode, la migliore tech academy che ti aiuterà a svoltare la tua
+                                vita!</p>
+                        </div>
+
+                        <div class="otherInfo">
+                            <ul>
+                                <li>Dic 20</li>
+                                <li>5 min di lettura</li>
+                                <li class="tag">Web Development</li>
+                                <li>Consigliato in base alla cronologia</li>
+                            </ul>
+                            <div class="buttonSingleArticle">
+                                <div class="saveArticleButton">
+                                    <span class="material-symbols-outlined">
+                                        bookmark_add
+                                    </span>
+                                </div>
+                                <div class="optionArticle">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="imageArticle">
+                        <img src="/assets/img/article/1_article_epicode.jpg" alt="">
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="singleArticle">
+                        <div class="authorArticle">
+                            <div class="proPicAuthor">
+                                <img src="/assets/img/propic/img_2.jpg" alt="">
+                            </div>
+                            <p class="nameAuthor">Piero Volpe</p>
+                        </div>
+                        <div class="informationArticle">
+                            <h2>I 5 trick per migliorare con HTML5</h2>
+                            <p>Vuoi imparare velocemente a sviluppare codice con HTML? Oggi ti spiego i 5 migliori trick
+                                di sempre</p>
+                        </div>
+
+                        <div class="otherInfo">
+                            <ul>
+                                <li>Feb 12</li>
+                                <li>7 min di lettura</li>
+                                <li class="tag">HTML5</li>
+                                <li>Consigliato in base alla cronologia</li>
+                            </ul>
+                            <div class="buttonSingleArticle">
+                                <div class="saveArticleButton">
+                                    <span class="material-symbols-outlined">
+                                        bookmark_add
+                                    </span>
+                                </div>
+                                <div class="optionArticle">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="imageArticle">
+                        <img src="/assets/img/article/2_article_html.jpg" alt="">
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="singleArticle">
+                        <div class="authorArticle">
+                            <div class="proPicAuthor">
+                                <img src="/assets/img/propic/img_11.jpg" alt="">
+                            </div>
+                            <p class="nameAuthor">Matilde Grosso</p>
+                        </div>
+                        <div class="informationArticle">
+                            <h2>CSS3, i nuovi moduli come Flexbox, nuova svolte nel coding!</h2>
+                            <p>Flexbox - Flex-Container- Flex-Item e tanti altri ancora!</p>
+                        </div>
+
+                        <div class="otherInfo">
+                            <ul>
+                                <li>Gen 4</li>
+                                <li>12 min di lettura</li>
+                                <li class="tag">CSS3</li>
+                                <li>Consigliato in base alla cronologia</li>
+                            </ul>
+                            <div class="buttonSingleArticle">
+                                <div class="saveArticleButton">
+                                    <span class="material-symbols-outlined">
+                                        bookmark_add
+                                    </span>
+                                </div>
+                                <div class="optionArticle">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="imageArticle">
+                        <img src="/assets/img/article/3_articolo_css.jpg" alt="">
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="singleArticle">
+                        <div class="authorArticle">
+                            <div class="proPicAuthor">
+                                <img src="/assets/img/propic/img_7.jpg" alt="">
+                            </div>
+                            <p class="nameAuthor">Paola Dupoi</p>
+                        </div>
+                        <div class="informationArticle">
+                            <h2>Sviluppare con React JS - 5 Consigli per apprenderlo e domarlo!</h2>
+                            <p>Cos'è React? Cos'è React JS? A cosa serve? Perché viene utilizzato? Scoprilo!</p>
+                        </div>
+
+                        <div class="otherInfo">
+                            <ul>
+                                <li>Giu 30</li>
+                                <li>8 min di lettura</li>
+                                <li class="tag">React JS</li>
+                                <li>Consigliato in base alla cronologia</li>
+                            </ul>
+                            <div class="buttonSingleArticle">
+                                <div class="saveArticleButton">
+                                    <span class="material-symbols-outlined">
+                                        bookmark_add
+                                    </span>
+                                </div>
+                                <div class="optionArticle">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="imageArticle">
+                        <img src="/assets/img/article/5_article_react.webp" alt="">
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="singleArticle">
+                        <div class="authorArticle">
+                            <div class="proPicAuthor">
+                                <img src="/assets/img/propic/img_6.jpg" alt="">
+                            </div>
+                            <p class="nameAuthor">Luca Nardi</p>
+                        </div>
+                        <div class="informationArticle">
+                            <h2>Tutti i segreti dietro Javascript - Come capirlo al meglio</h2>
+                            <p>Tutti sappiamo a cosa serve Javascript, ma non tutti conoscono i suoi lati negativi.</p>
+                        </div>
+
+                        <div class="otherInfo">
+                            <ul>
+                                <li>Set 1</li>
+                                <li>9 min di lettura</li>
+                                <li class="tag">Web Development</li>
+                                <li>Consigliato in base alla cronologia</li>
+                            </ul>
+                            <div class="buttonSingleArticle">
+                                <div class="saveArticleButton">
+                                    <span class="material-symbols-outlined">
+                                        bookmark_add
+                                    </span>
+                                </div>
+                                <div class="optionArticle">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="imageArticle">
+                        <img src="/assets/img/article/4_article_js.avif" alt="">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div id="wrapperLateral">
+            <aside>
+                <div class="connectSocial">
+                    <div class="logoSocial">
+                        <img src="/assets/logos/Medium_pittogramma_logo.svg" alt="Pittogramma logo Medium">
+                        <p>+</p>
+                        <img src="/assets/logos/Logo_of_Twitter.svg.png" alt="Logo Twitter">
+                    </div>
+                    <p class="exploreTwitter">Esplora gli scrittori di Medium che segui su Twitter.</p>
+                    <div class="buttonSocial">
+                        <div class="logoButtonSocial"><img src="/assets/logos/Logo_of_Twitter.svg.png"
+                                alt="Logo Twitter">
+                        </div>
+                        <p>Collega Twitter</p>
+                    </div>
+                    <a href="#">Più Tardi</a>
+                </div>
+                <div class="containerRecommendedTopics">
+                    <h3>Topic Consigliati</h3>
+                    <div class="groupTopics">
+                        <ul>
+                            <li>Tecnologia</li>
+                            <li>Sviluppo</li>
+                            <li>Web Development</li>
+                            <li>Cybersecurity</li>
+                            <li>Tech Academy</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="follower">
+                    <h3>Chi puoi seguire</h3>
+                    <div class="boxPeople">
+                        <div class="people">
+                            <div class="boxSinglePeople">
+                                <div class="peopleProPic">
+                                    <img src="/assets/img/propic/img_12.jpg" alt="Foto Profilo Fulvia">
+                                </div>
+                                <div class="peopleInfo">
+                                    <p class="peopleName">Fulvia Poretti</p>
+                                    <p class="peopleDescription">Sviluppatore di app</p>
+                                </div>
+                            </div>
+                            <div class="followPeople">
+                                <p>Segui</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boxPeople">
+                        <div class="people">
+                            <div class="boxSinglePeople">
+                                <div class="peopleProPic">
+                                    <img src="/assets/img/propic/img_10.jpg" alt="Foto Profilo Fulvia">
+                                </div>
+                                <div class="peopleInfo">
+                                    <p class="peopleName">Kevin Moccia</p>
+                                    <p class="peopleDescription">Sviluppatore di web</p>
+                                </div>
+                            </div>
+                            <div class="followPeople">
+                                <p>Segui</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boxPeople">
+                        <div class="people">
+                            <div class="boxSinglePeople">
+                                <div class="peopleProPic">
+                                    <img src="/assets/img/propic/img_9.jpg" alt="Foto Profilo Fulvia">
+                                </div>
+                                <div class="peopleInfo">
+                                    <p class="peopleName">Simone Forte</p>
+                                    <p class="peopleDescription">Esperto in Cybersecurity</p>
+                                </div>
+                            </div>
+                            <div class="followPeople">
+                                <p>Segui</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boxPeople">
+                        <div class="people">
+                            <div class="boxSinglePeople">
+                                <div class="peopleProPic">
+                                    <img src="/assets/img/propic/img_8.jpg" alt="Foto Profilo Fulvia">
+                                </div>
+                                <div class="peopleInfo">
+                                    <p class="peopleName">Francesco Simonetti</p>
+                                    <p class="peopleDescription">Web Developer</p>
+                                </div>
+                            </div>
+                            <div class="followPeople">
+                                <p>Segui</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recentlySaved">
+                    <h3>Salvati di recente</h3>
+                    <div class="contentSaved">
+                        <div class="authorArticleSaved">
+                            <div class="ProPicSaved">
+                                <img src="/assets/img/propic/img_2.jpg" alt="Logo Ness">
+                            </div>
+                            <p>Giulio Kaufmann <span>in</span> Ness SpA</p>
+                        </div>
+                        <h4>Come ho sviluppato la mia prima App per Mobile</h4>
+                        <div class="infoSaved">
+                            <ul>
+                                <li>7 Nov 2025</li>
+                                <li>5 min di lettura</li>
+                                <li>&#9733;</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contentSaved">
+                        <div class="authorArticleSaved">
+                            <div class="ProPicSaved">
+                                <img src="/assets/img/propic/img_2.jpg" alt="Logo Ness">
+                            </div>
+                            <p>Giulio Kaufmann</p>
+                        </div>
+                        <h4>Python ed i suoi segreti</h4>
+                        <div class="infoSaved">
+                            <ul>
+                                <li>12 Dic 2025</li>
+                                <li>6 min di lettura</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="buttonSeeAll">
+                        <a href="#">Guarda tutti</a>
+                    </div>
+                </div>
+            </aside>
+
+            <footer>
+                <nav>
+                    <ul>
+                        <a href="#">
+                            <li>Aiuto</li>
+                        </a>
+                        <a href="#">
+                            <li>Stato</li>
+                        </a>
+                        <a href="#">
+                            <li>Scrittori</li>
+                        </a>
+                        <a href="#">
+                            <li>Blog</li>
+                        </a>
+                        <a href="#">
+                            <li>Carriere</li>
+                        </a>
+                        <a href="#">
+                            <li>Privacy</li>
+                        </a>
+                        <a href="#">
+                            <li>Termini e Condizioni</li>
+                        </a>
+                        <a href="#">
+                            <li>Altro su di noi</li>
+                        </a>
+                    </ul>
+                </nav>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

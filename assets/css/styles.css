@@ -1,0 +1,530 @@
+/* Penso di aver scritto molto codice superfluo o comunque ripetuto, ripeto quanto commentato
+all'interno dell'html, ho utilizzato l'attributo curson pointer solo per dare l'effetto che 
+fossero dei bottoni da cliccare. essendo che il prof di pratica ci ha spiegato che poi questi 
+button servono per mandare un segnale al server e quant'altro e che poi avranno senso dopo che 
+utilizzeremo javascript, preferisco utilizzarli non appena approfondiremo l'argomento senza cercare
+di farmelo spiegare da internet. 
+
+Ho usato anche questo per non incasinare con eventuali a href ed eventuali button*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: #000000;
+  color: white;
+}
+
+body {
+  font-family: Figtree, Arial, sanse-serif;
+  font-size: 1rem;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  padding: 2em 0;
+  box-shadow: 0px 0.15em 0.5em #c5c5c5;
+}
+
+#wrapperHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20em;
+}
+
+.logo {
+  width: 10em;
+  height: auto;
+}
+
+.logo img {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav > div {
+  margin: 0 0.3em;
+}
+
+.searchButton {
+  display: flex;
+  width: 2em;
+  height: 2em;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  transition: 0.1s linear;
+  background-color: #eeeeee;
+}
+.saveButton {
+  display: flex;
+  width: 2em;
+  height: 2em;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.saveButton:hover {
+  transition: 0.1s linear;
+  background-color: #eeeeee;
+}
+
+.notifyButton {
+  display: flex;
+  width: 2em;
+  height: 2em;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.notifyButton:hover {
+  transition: 0.1s linear;
+  background-color: #eeeeee;
+}
+
+.memberButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.1em solid #7c7c7c;
+  width: 9em;
+  height: 2em;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.memberButton:hover {
+  transition: 0.1s linear;
+  background-color: #eeeeee;
+}
+
+.memberButton p {
+  font-weight: 400;
+}
+
+.profileButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: blueviolet;
+  cursor: pointer;
+}
+
+.profileButton p {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: white;
+}
+
+.profileButton:hover {
+  transition: 0.1s linear;
+  box-shadow: 0em 0em 0.5em black;
+}
+
+#wrapper {
+  margin: 5em 20em;
+  display: flex;
+}
+
+main {
+  width: 80%;
+  border-right: 1px solid #e6e6e6;
+}
+
+.choiceView {
+  width: 100%;
+  display: flex;
+  font-variant-caps: all-petite-caps;
+  font-size: 1.3em;
+  border-bottom: 1px solid #e6e6e6;
+  cursor: pointer;
+}
+
+.choiceView > div {
+  padding-bottom: 0.7em;
+  margin: 0 1em;
+}
+
+.choiceFollowing {
+  font-weight: 600;
+  color: #747474;
+}
+
+.choiceRecommended {
+  font-weight: 600;
+  border-bottom: 1px solid #000000;
+}
+
+.recommended {
+  width: 90%;
+}
+
+.article {
+  display: flex;
+  width: 100%;
+  height: 15em;
+  justify-content: space-between;
+  margin: 2em 0;
+}
+
+.article:hover {
+  box-shadow: 0em 0.3em 1em black;
+}
+
+.singleArticle {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding: 0 0.6em;
+  justify-content: center;
+}
+
+.singleArticle > div {
+  margin: 0.5em 0;
+}
+
+.singleArticle .authorArticle {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.proPicAuthor {
+  overflow: hidden;
+  display: flex;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.proPicAuthor img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.nameAuthor {
+  margin-left: 0.7em;
+}
+
+.informationArticle h2,
+.informationArticle p {
+  margin-bottom: 0.3em;
+  cursor: pointer;
+}
+
+.informationArticle p {
+  color: #747474;
+}
+
+.article .otherInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.otherInfo {
+  display: flex;
+  font-size: 0.7em;
+}
+
+.otherInfo ul {
+  color: #747474;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.otherInfo li {
+  margin-left: 1em;
+}
+
+.otherInfo ul li:first-child {
+  list-style: none;
+  margin: 0;
+}
+
+.otherInfo .tag {
+  padding: 0.5em;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.buttonSingleArticle {
+  display: flex;
+}
+
+.buttonSingleArticle > div {
+  margin: 0 0.3em;
+}
+
+.saveArticleButton {
+  border-radius: 50%;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.optionArticle {
+  border-radius: 50%;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.saveArticleButton:hover {
+  transition: 0.1s linear;
+  background-color: #eeeeee;
+}
+
+.optionArticle:hover {
+  transition: 0.1s linear;
+  background-color: #eeeeee;
+}
+
+.imageArticle {
+  display: flex;
+  width: 30%;
+  height: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+.imageArticle img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+#wrapperLateral {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 3em;
+  width: 20%;
+}
+
+.connectSocial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 3em;
+  gap: 2em;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.connectSocial img {
+  width: 2em;
+  height: auto;
+}
+
+.logoSocial {
+  display: flex;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+.exploreTwitter {
+  text-align: center;
+}
+
+.buttonSocial {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.3em 2em;
+  border: 0.1em solid #aaaaaa;
+  border-radius: 2em;
+  cursor: pointer;
+}
+
+.connectSocial a {
+  font-size: 0.8em;
+  color: #aaaaaa;
+}
+
+.containerRecommendedTopics {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.containerRecommendedTopics h3 {
+  font-weight: 500;
+  margin: 1em 0;
+}
+
+.groupTopics {
+  display: flex;
+}
+
+.groupTopics ul {
+  display: flex;
+  margin: auto;
+  gap: 0.5em 2em;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.groupTopics ul li {
+  border-radius: 2em;
+  background-color: #f2f2f2;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.follower {
+  display: flex;
+  flex-direction: column;
+  margin: 3em 1em;
+  gap: 1em 0;
+}
+
+.people {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.follower h3 {
+  font-weight: 500;
+  margin: 1em 0;
+}
+
+.boxSinglePeople {
+  display: flex;
+  align-items: center;
+  gap: 0 0.8em;
+}
+.peopleProPic {
+  overflow: hidden;
+  display: flex;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.peopleProPic img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.peopleName {
+  font-weight: 600;
+}
+
+.peopleDescription {
+  font-size: 0.8em;
+  color: #747474;
+}
+
+.followPeople {
+  padding: 0.3em 1em;
+  border: 0.1em solid #aaaaaa;
+  border-radius: 2em;
+  cursor: pointer;
+}
+
+.recentlySaved {
+  display: flex;
+  flex-direction: column;
+  margin: 3em 1em;
+  gap: 1em 0;
+}
+
+.recentlySaved h3 {
+  font-weight: 500;
+  margin: 1em 0;
+}
+
+.contentSaved {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1em 0;
+}
+
+.authorArticleSaved {
+  display: flex;
+  gap: 0 0.5em;
+  align-items: center;
+}
+
+.ProPicSaved {
+  overflow: hidden;
+  display: flex;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 20%;
+}
+
+.authorArticleSaved img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.authorArticleSaved p {
+  font-weight: 600;
+}
+
+.authorArticleSaved span {
+  font-weight: normal;
+  color: #747474;
+}
+
+.infoSaved ul {
+  display: flex;
+  gap: 0 1.2em;
+  margin: auto;
+  font-size: 0.8em;
+  color: #747474;
+  align-items: center;
+}
+
+.infoSaved li:first-child {
+  list-style: none;
+}
+
+.buttonSeeAll a {
+  color: #4a9b44;
+  font-size: 0.9em;
+}
+
+footer {
+  display: flex;
+  margin: 3em 1em;
+}
+
+footer nav ul {
+  display: flex;
+  list-style: none;
+  margin: auto;
+  gap: 1em 1em;
+  flex-wrap: wrap;
+  color: #747474;
+  font-size: 0.8em;
+}
+
+footer nav ul a {
+  color: #747474;
+  text-decoration: none;
+}
